@@ -129,7 +129,7 @@ public class DAOEstacionamento {
 			ResultSet resultado = ps.executeQuery();
 			
 			if(resultado.next()) {
-				String rplaca = resultado.getNString("placa");
+				String rplaca = resultado.getString("placa");
 				String rdataEntrada = resultado.getString("data_entrada");
 				Veiculo veiculo = new Veiculo(rplaca);
 				movimentacao = new Movimentacao(veiculo,

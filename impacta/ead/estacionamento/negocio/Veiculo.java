@@ -21,7 +21,7 @@ public class Veiculo {
 	}
 	
 	public Veiculo(String rplaca) {
-		this.placa = placa;
+		this.placa = rplaca;
 	}
 
 	public String getPlaca() {

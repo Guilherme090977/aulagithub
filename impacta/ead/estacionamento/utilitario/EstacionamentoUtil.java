@@ -98,6 +98,10 @@ public class EstacionamentoUtil {
 		return LocalDateTime.parse(rdataEntrada,
 				DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.S"));
 	}
+
+	public static String getDisplayData(LocalDateTime data) {
+		return data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+	}
 	
 	
 
