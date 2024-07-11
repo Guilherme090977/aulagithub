@@ -26,12 +26,7 @@ public class TelaEntradaVeiculo extends JFrame implements ActionListener{
 	private JButton btnOk;
 	private JButton btnCancel;
 	
-	//TODO Temporário
-	public static void main(String[] args) {
-		
-		TelaEntradaVeiculo tela = new TelaEntradaVeiculo(null);
-		tela.setVisible(true);
-	}
+	
 	
 
 	public TelaEntradaVeiculo(JFrame parent) {

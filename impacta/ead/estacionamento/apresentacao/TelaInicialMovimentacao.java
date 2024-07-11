@@ -14,12 +14,7 @@ public class TelaInicialMovimentacao extends JFrame implements ActionListener {
 	private JButton btnEntrar;
 	private JButton btnSair;
 	
-	//TODO Temporário
 	
-	public static void main(String[] args) {
-		TelaInicialMovimentacao tela = new TelaInicialMovimentacao();
-		tela.setVisible(true);
-	}
 	
 	public TelaInicialMovimentacao() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
