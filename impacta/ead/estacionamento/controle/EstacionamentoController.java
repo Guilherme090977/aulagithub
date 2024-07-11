@@ -93,10 +93,21 @@ public class EstacionamentoController {
 		return movimentacao;
 	}
 	
+	/**
+	 * Realiza o fluxo de emissão de relatório de faturamento
+	 * baseado num ano e mês informados
+	 * 
+	 * @param data Data (Mês e Ano) de emissão desejado
+	 * 
+	 * @return Lista de movimentações que atendem ao filtro
+	 */
+	
 	public List<Movimentacao> emitirRelatorio(LocalDateTime data){
-		//TODO implementar
-		return null;
+		DAOEstacionamento dao = new DAOEstacionamento();
+		return dao.consultarMovimentacoes(data);
 	}
+	
+	
 	public int inicializarOcupadas() {
 		DAOEstacionamento dao = new DAOEstacionamento();
 		return dao.getOcupadas();

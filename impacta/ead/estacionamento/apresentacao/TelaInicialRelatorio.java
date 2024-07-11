@@ -58,16 +58,16 @@ public class TelaInicialRelatorio extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent evento) {
 		//recupera do combo o ano e mes escolhido
-		int ano = (Integer) cboAno.getSelectedItem();
+		int ano = Integer.parseInt((String) cboAno.getSelectedItem());
 		int mes = (Integer) cboMes.getSelectedIndex()+1;
 		
 		//buscar as movimentações do ano e mês informados
 		EstacionamentoController controle = new EstacionamentoController();
-		LocalDateTime data = LocalDateTime.of(1, mes, 1,0,0);
+		LocalDateTime data = LocalDateTime.of(ano, mes, 1,0,0);
 		List<Movimentacao>movimentacoes = controle.emitirRelatorio(data);
 		
 		//Exibe a tela de conteudo e faturamento
-		TelaResultadoRelatorio relatorio = new TelaResultadoRelatorio(this,movimentacoes);
+		TelaResultadoRelatorio relatorio = new TelaResultadoRelatorio(this, movimentacoes, data);
 		
 		relatorio.setVisible(true);
 		dispose();
